@@ -9,44 +9,39 @@
 <br>
 <br>
 <br>
-<center><font color="#000066" face='georgia' size=7><b>Inuuna</b></font>
+<center><font id="cName" color="#000066" face='georgia' size=7><b>Inuuna</b></font>
 <br>
   <br>
+  <button id="prev" onclick="btnPrev()" style="float:left;">prev</button>
+  <button id="next" onclick="btnNext()" style="float:right;">next</button>
 <font id="first" color="#000066" face='verdana' size='3'style="font-weight: 900;">
 The young Felinae has lived as a part of a travelling caravan of tradesmen who has found her on their route, and decided to take her in.They taught her the tricks of the merchant trade starting from a young age.
  </font>
-  <br>
-<br>
+
 <font id="2nd" color="#000066" face='verdana' size='3'style="font-weight: 900;">
 She always felt quite different from the rest of the kids in the caravan seeing that she was the only Felinae in between them, however the chief of the caravan always took special interest in her.
  </font>
-  <br>
-<br>
+
 <font id="3rd" color="#000066" face='verdana' size='3'style="font-weight: 900;">
 when she turned 15 he ordered all the merchants who were sent out making deals to bring her along for the negotiations and show her the art of it.She would often get in trouble because she tends to just say whatever is on her mind, she later managed to avoid doing that when doing business but in her everyday life it is still present today.
  </font>
-  <br>
-<br>
+
 <font id="4th" color="#000066" face='verdana' size='3'style="font-weight: 900;">
 By the age of 18 she would be assigned her own route and clients, she would often get scolded for spending too much of her time at smokey inns after deals before returning to the others in the caravan developing quite a taste for ale.
  </font>
-  <br>
-<br>
+
 <font id="5th" color="#000066" face='verdana' size='3'style="font-weight: 900;">
 When she was 25 the chief would call all their traders back for a meeting where he would tell them that a grand order has been made and they have to depart post-haste, and they did so.They prepared all their wares and their tents to take on the road.
  </font>
-  <br>
-<br>
+ 
 <font id="6th" color="#000066" face='verdana' size='3'style="font-weight: 900;">
  After ten days of travelling she would sense that something is not allright, she would feel somebody following them.By the time the night fell a group of bandits have ambushed their caravan, they were not fighters at all so the ambush turned quite chaotic, and in the disorder everybody would try to scatter and run.
  </font>
-  <br>
-<br>
+ 
  <font id="7th" color="#000066" face='verdana' size='3'style="font-weight: 900;">
 She ran too but in the heat of the escape she tripped over a rock and lost conciousness, she would later wake up in the woods alone with little memory of what happened. She tried to go look for her family and friends but all she found was what was left of their wares and homes seeing that they were robbed.
  </font>
-  <br>
-<br>
+ 
  <font id="8th" color="#000066" face='verdana' size='3'style="font-weight: 900;">
 After a couple hours of looking for survivors she would then realised she is going to have to try and fend for herself from now on.she met a friendly hunter near the edge of the woods who would take pitty on her and give her some contracts for hunting.When she part ways with the hunter she decided to look for the waystone inn he told her about saying if she'd tell the keep that he sent her they would help her and so they did.
 She spent her days fishing and panhandling until she would save up enough coins to pay for her room and set up shop in the Osronan market to sell her wares as it being the only thing she really knew about.
@@ -60,15 +55,125 @@ She spent her days fishing and panhandling until she would save up enough coins 
 
 
 <script>
-
+let textId = "#first"
 $(document).ready(function(){
  //$('img').fadeout();
  $('img').hide();
+ $('#prev').css("visibility","hidden");
 $('img').fadeIn(3000);
 $('font').hide();
-$('font').fadeTo(3000, 1.0);
+  
+//$('font').fadeTo(3000, 1.0);
+$("#cName").fadeTo(3000, 1.0);
+  $(textId).fadeTo(3000, 1.0);
+   
 
 
 });
 
+function btnNext(){
+
+switch (textId) {
+  case "#first":
+   $('#next').css("visibility","visible");
+   $('#prev').css("visibility","visible");
+    $(textId).hide();
+	textId = "#2nd";
+	$(textId).fadeTo(3000, 1.0);
+    break;
+  case "#2nd":
+   
+    $(textId).hide();
+	textId = "#3rd";
+	$(textId).fadeTo(3000, 1.0);
+    break;
+  case "#3rd":
+    $(textId).hide();
+	textId = "#4th";
+	$(textId).fadeTo(3000, 1.0);
+    break;
+  case "#4th":
+    $(textId).hide();
+	textId = "#5th";
+	$(textId).fadeTo(3000, 1.0);
+    break;
+  case "#5th":
+    $(textId).hide();
+	textId = "#6th";
+	$(textId).fadeTo(3000, 1.0);
+    break;
+  case "#6th":
+    $(textId).hide();
+	textId = "#7th";
+	$(textId).fadeTo(3000, 1.0);
+    break;
+  case "#7th":
+  $('#next').css("visibility","hidden");
+   $('#prev').css("visibility","visible");
+    $(textId).hide();
+	textId = "#8th";
+	$(textId).fadeTo(3000, 1.0);
+    break;
+  case "#8th":
+   $('#next').css("visibility","hidden");
+   $('#prev').css("visibility","visible");
+    
+    break;
+}
+
+
+}
+
+function btnPrev(){
+
+switch (textId) {
+  case "#first":
+  $('#next').css("visibility","visible");
+   $('#prev').css("visibility","hidden");
+    $(textId).hide();
+    break;
+  case "#2nd":
+   $('#next').css("visibility","visible");
+   $('#prev').css("visibility","hidden");
+    $(textId).hide();
+	textId = "#first";
+	$(textId).fadeTo(3000, 1.0);
+    break;
+  case "#3rd":
+    $(textId).hide();
+	textId = "#2nd";
+	$(textId).fadeTo(3000, 1.0);
+    break;
+  case "#4th":
+    $(textId).hide();
+	textId = "#3rd";
+	$(textId).fadeTo(3000, 1.0);
+    break;
+  case "#5th":
+    $(textId).hide();
+	textId = "#4th";
+	$(textId).fadeTo(3000, 1.0);
+    break;
+  case "#6th":
+    $(textId).hide();
+	textId = "#5th";
+	$(textId).fadeTo(3000, 1.0);
+    break;
+  case "#7th":
+    $(textId).hide();
+	textId = "#6th";
+	$(textId).fadeTo(3000, 1.0);
+    break;
+  case "#8th":
+  $('#next').css("visibility","visible");
+  $('#prev').css("visibility","visible");
+    $(textId).hide();
+	textId = "#7th";
+	$(textId).fadeTo(3000, 1.0);
+    
+    break;
+}
+
+
+}
 </script>
