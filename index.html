@@ -12,8 +12,10 @@
 <center><font id="cName" color="#000066" face='georgia' size=7><b>Inuuna</b></font>
 <br>
   <br>
-  <button id="prev" onclick="btnPrev()" style="float:left;">prev</button>
-  <button id="next" onclick="btnNext()" style="float:right;">next</button>
+  <button class="round" id="prev" onclick="btnPrev()" style="float:left;">&#8249;</button>
+  <button class="round" id="next" onclick="btnNext()" style="float:right;">&#8250;</button>
+  
+  <div class="textblock">
 <font id="first" color="#000066" face='verdana' size='3'style="font-weight: 900;">
 The young Felinae has lived as a part of a travelling caravan of tradesmen who has found her on their route, and decided to take her in.They taught her the tricks of the merchant trade starting from a young age.
  </font>
@@ -46,7 +48,7 @@ She ran too but in the heat of the escape she tripped over a rock and lost conci
 After a couple hours of looking for survivors she would then realised she is going to have to try and fend for herself from now on.she met a friendly hunter near the edge of the woods who would take pitty on her and give her some contracts for hunting.When she part ways with the hunter she decided to look for the waystone inn he told her about saying if she'd tell the keep that he sent her they would help her and so they did.
 She spent her days fishing and panhandling until she would save up enough coins to pay for her room and set up shop in the Osronan market to sell her wares as it being the only thing she really knew about.
  </font>
-
+</div>
 
 
 </center>
@@ -177,3 +179,36 @@ switch (textId) {
 
 }
 </script>
+
+
+
+<style>
+
+
+
+
+#prev {
+  background-color: #3385ff;
+  color: white;
+}
+
+#next {
+  background-color: #3385ff;
+  color: white;
+}
+
+.round {
+  border-radius: 50%;
+}
+
+.textblock {
+  display: block;
+  width: 90vw;
+  height: 50%;
+  padding: 5px;
+  border: 1px solid blue;    
+  
+}
+
+</style>
+
