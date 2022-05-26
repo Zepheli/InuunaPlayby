@@ -1,20 +1,32 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Sail&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch&family=Tapestry&display=swap" rel="stylesheet">
 
 
-<body style="background-image:url('https://cdn.wallpapersafari.com/76/91/cMZupT.jpg'); background-repeat: no-repeat; background-size: cover;">
-<img align=left src=https://i.postimg.cc/Gm1fxQ5f/Inu2ver2.png width=auto height=100% style="display: block;
-  margin-left: auto;
-  margin-right: auto;">
+<body style="background-image:url('https://cdn.wallpapersafari.com/76/91/cMZupT.jpg'); background-repeat: no-repeat; background-size: cover !important; margin:0;">
+
+<img id="pic" align=right src=https://i.postimg.cc/Z5gxMW3j/Inu-old.png width=auto height=100% style="margin-right:-200px;transition: 5s;">
 <br>
 <br>
 <br>
 <br>
-<center><font id="cName" color="#6600cc" face='georgia' size=7><b>Inuuna</b></font>
 <br>
-  <br>
-  <button class="round" id="prev" onclick="btnPrev()" style="float:left;">&#8249;</button>
+<br>
+<br>
+<br>
+
+<center>
+<div style="background-color:#d9b3ff; border-style: double; border-color: #6600cc;">
+<font class="name" color="#6600cc" style="font-family: 'Grenze Gotisch', cursive;font-size:80px;"><b>Inuuna Nekosaru</b></font>
+ <br>
+ <hr>
+ 
+<br>
+ <button class="round" id="prev" onclick="btnPrev()" style="float:left;">&#8249;</button>
   <button class="round" id="next" onclick="btnNext()" style="float:right;">&#8250;</button>
-  
   <div class="textblock">
 <font id="first" color="#6600cc" face='verdana' size='3'style="font-weight: 900;">
 The young Felinae has lived as a part of a travelling caravan of tradesmen who has found her on their route, and decided to take her in.They taught her the tricks of the merchant trade starting from a young age.
@@ -48,27 +60,48 @@ She ran too but in the heat of the escape she tripped over a rock and lost conci
 After a couple hours of looking for survivors she would then realised she is going to have to try and fend for herself from now on.she met a friendly hunter near the edge of the woods who would take pitty on her and give her some contracts for hunting.When she part ways with the hunter she decided to look for the waystone inn he told her about saying if she'd tell the keep that he sent her they would help her and so they did.
 She spent her days fishing and panhandling until she would save up enough coins to pay for her room and set up shop in the Osronan market to sell her wares as it being the only thing she really knew about.
  </font>
+ </div>
+<br>
 </div>
-
-
 </center>
+
 
 <iframe width=0 height=0 src=https://www.youtube.com/embed/TYqjn7vdzOY?autoplay=1 title=YouTube video player frameborder=0 allow=accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe>
 
 
 <script>
-let textId = "#first"
+
 $(document).ready(function(){
  //$('img').fadeout();
  $('img').hide();
- $('#prev').css("visibility","hidden");
 $('img').fadeIn(3000);
 $('font').hide();
-  
 //$('font').fadeTo(3000, 1.0);
-$("#cName").fadeTo(3000, 1.0);
-  $(textId).fadeTo(3000, 1.0);
-   
+
+
+});
+
+</script>
+
+
+
+<script>
+let textId = "#first"
+$(document).ready(function(){
+$('#prev').css("visibility","hidden");
+ //$('img').fadeout();
+ /*$('img').hide();
+$('img').fadeIn(3000);
+$('font').hide();
+$('font').fadeTo(3000, 1.0);*/
+$('#pic').hide();
+$('font').hide();
+$('#pic').animate({"margin-right": '+=200'}, 1000);
+$('#pic').fadeTo(3000, 1.0);
+/*$('#blood').animate({"margin-right": '+=300'}, 1000);
+$('#blood').fadeTo(3000, 1.0);*/
+$('.name').fadeTo(3000, 1.0);
+$(textId).fadeTo(3000, 1.0);
 
 
 });
@@ -178,8 +211,8 @@ switch (textId) {
 
 
 }
-</script>
 
+</script>
 
 
 <style>
@@ -195,10 +228,6 @@ switch (textId) {
   
 }
 
-center{
-background-color: #d9b3ff;
-
-}
 
 .round {
   border-radius: 50%;
@@ -207,16 +236,7 @@ background-color: #d9b3ff;
   height: 40px;
 }
 
-/*.textblock {
-  display: block;
-  /*width: 85vw;
-  width: auto;
-  margin-left: 420px;
-  margin-right: 50px;
-  height: 30%;
-  padding: 5px;
-  border: 1px solid blue;    
-  */
+
 }
 
 </style>
